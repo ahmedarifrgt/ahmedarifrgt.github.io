@@ -4,10 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MD Arif | Portfolio</title>
-
+<img src="IMG_20230322_212858.jpg" alt="MD Arif" class="profile-pic" />
   <!-- Icons -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-
+<header id="home">
+  <div>
+    <img src="IMG_20230322_212858.jpg" alt="MD Arif" class="profile-pic" />
+    <h1>MD Arif</h1>
+    <p>BSc in CSE Student | Aspiring Software Engineer</p>
+    <p class="hero-text">
+      I am passionate about building clean, efficient, and scalable software
+      solutions while continuously learning modern technologies.
+    </p>
+    <div class="buttons">
+      <a href="#projects">View Projects</a>
+      <a href="#contact" class="secondary">Contact Me</a>
+    </div>
+  </div>
+</header>
+  
   <style>
     * {
       margin: 0;
@@ -151,7 +166,15 @@
     .contact {
       text-align: center;
     }
-
+.profile-pic {
+  width: 150px;           /* adjust size */
+  height: 150px;
+  object-fit: cover;      /* keep proportions */
+  border-radius: 50%;     /* make circle */
+  border: 4px solid #38bdf8; /* optional border color */
+  margin-bottom: 20px;
+  animation: fadeIn 1.5s ease-in;
+}
     .contact a {
       display: inline-block;
       margin: 10px 15px;
