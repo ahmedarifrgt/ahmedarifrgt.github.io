@@ -1,10 +1,162 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MD Arif | Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: #0f172a;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: #38bdf8;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      color: #cbd5f5;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #38bdf8;
+      font-size: 2rem;
+    }
+
+    .about p {
+      text-align: center;
+      max-width: 700px;
+      margin: auto;
+      font-size: 1.05rem;
+      color: #d1d5db;
+    }
+
+    .skills, .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #020617;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 30px rgba(56,189,248,0.2);
+    }
+
+    .card h3 {
+      color: #38bdf8;
+      margin-bottom: 10px;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact a {
+      display: inline-block;
+      margin: 10px;
+      color: #38bdf8;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #020617;
+      color: #9ca3af;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Hello, I'm MD Arif</h1>
-  <p>This is my personal website.</p>
+
+  <header>
+    <div>
+      <h1>MD Arif</h1>
+      <p>BSc in CSE Student | Aspiring Software Engineer</p>
+    </div>
+  </header>
+
+  <section class="about">
+    <h2>About Me</h2>
+    <p>
+      I am a Computer Science & Engineering student passionate about
+      software development, problem solving, and modern technologies.
+      I enjoy learning new tools and building real-world projects.
+    </p>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="card"><h3>Programming</h3><p>C, C++, Python, Java</p></div>
+      <div class="card"><h3>Web</h3><p>HTML, CSS, JavaScript</p></div>
+      <div class="card"><h3>Tools</h3><p>Git, GitHub, Linux</p></div>
+      <div class="card"><h3>Interests</h3><p>AI, ML, Problem Solving</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Personal Portfolio</h3>
+        <p>My own CV website hosted on GitHub Pages.</p>
+      </div>
+      <div class="card">
+        <h3>Academic Project</h3>
+        <p>University-level project related to CSE.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Contact</h2>
+    <a href="https://github.com/ahmedarifrgt" target="_blank">GitHub</a>
+    <a href="#">LinkedIn (add later)</a>
+    <a href="mailto:yourmail@example.com">Email</a>
+  </section>
+
+  <footer>
+    © 2026 MD Arif. All rights reserved.
+  </footer>
+
 </body>
 </html>
