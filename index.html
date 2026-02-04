@@ -4,26 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MD Arif | Portfolio</title>
-<img src="IMG_20230322_212858.jpg" alt="MD Arif" class="profile-pic" />
   <!-- Icons -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-<header id="home">
-  <div>
-    <img src="IMG_20230322_212858.jpg" alt="MD Arif" class="profile-pic" />
-    <h1>MD Arif</h1>
-    <p>BSc in CSE Student | Aspiring Software Engineer</p>
-    <p class="hero-text">
-      I am passionate about building clean, efficient, and scalable software
-      solutions while continuously learning modern technologies.
-    </p>
-    <div class="buttons">
-      <a href="#projects">View Projects</a>
-      <a href="#contact" class="secondary">Contact Me</a>
-    </div>
-  </div>
-</header>
-  
   <style>
+    :root {
+      --primary-color: #38bdf8;
+      --secondary-color: #0f172a;
+      --accent-color: #020617;
+      --text-color: #e5e7eb;
+      --muted-text: #d1d5db;
+      --shadow: rgba(56, 189, 248, 0.3);
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -33,9 +25,10 @@
     }
 
     body {
-      background: #0f172a;
-      color: #e5e7eb;
+      background: linear-gradient(135deg, var(--secondary-color) 0%, #1e293b 100%);
+      color: var(--text-color);
       line-height: 1.6;
+      overflow-x: hidden;
     }
 
     /* NAVBAR */
@@ -43,23 +36,44 @@
       position: fixed;
       top: 0;
       width: 100%;
-      background: rgba(2, 6, 23, 0.9);
+      background: rgba(2, 6, 23, 0.95);
+      backdrop-filter: blur(10px);
       display: flex;
       justify-content: center;
-      gap: 25px;
-      padding: 15px;
+      gap: 30px;
+      padding: 20px;
       z-index: 1000;
+      border-bottom: 1px solid var(--primary-color);
     }
 
     nav a {
-      color: #e5e7eb;
+      color: var(--text-color);
       text-decoration: none;
-      font-size: 0.95rem;
-      transition: color 0.3s;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -5px;
+      left: 50%;
+      background: var(--primary-color);
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+      left: 0;
     }
 
     nav a:hover {
-      color: #38bdf8;
+      color: var(--primary-color);
+      transform: translateY(-2px);
     }
 
     /* HERO */
@@ -69,136 +83,194 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 80px 20px;
-      animation: fadeIn 1.2s ease-in;
+      padding: 100px 20px;
+      background: radial-gradient(circle at center, rgba(56, 189, 248, 0.1) 0%, transparent 70%);
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    .profile-pic {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid var(--primary-color);
+      box-shadow: 0 0 30px var(--shadow);
+      margin-bottom: 30px;
+      animation: bounceIn 1.2s ease-out;
     }
 
     header h1 {
-      font-size: 3.2rem;
-      color: #38bdf8;
+      font-size: 3.5rem;
+      color: var(--primary-color);
+      margin-bottom: 10px;
+      text-shadow: 0 0 20px var(--shadow);
     }
 
     header p {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       margin-top: 10px;
-      color: #cbd5f5;
+      color: var(--muted-text);
+      font-weight: 300;
     }
 
     .hero-text {
-      max-width: 700px;
-      margin: 15px auto;
-      color: #d1d5db;
+      max-width: 800px;
+      margin: 20px auto;
+      color: var(--muted-text);
+      font-size: 1.1rem;
+    }
+
+    .buttons {
+      margin-top: 30px;
     }
 
     .buttons a {
       display: inline-block;
-      margin: 15px 10px 0;
-      padding: 12px 22px;
-      border-radius: 25px;
-      background: #38bdf8;
-      color: #020617;
+      margin: 0 15px;
+      padding: 15px 30px;
+      border-radius: 30px;
+      background: linear-gradient(45deg, var(--primary-color), #06b6d4);
+      color: var(--accent-color);
       text-decoration: none;
       font-weight: 600;
-      transition: transform 0.3s, box-shadow 0.3s;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px var(--shadow);
     }
 
     .buttons a.secondary {
       background: transparent;
-      border: 1px solid #38bdf8;
-      color: #38bdf8;
+      border: 2px solid var(--primary-color);
+      color: var(--primary-color);
     }
 
     .buttons a:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 25px rgba(56,189,248,0.3);
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 10px 30px var(--shadow);
     }
 
+    /* SECTIONS */
     section {
-      padding: 80px 20px;
-      max-width: 1000px;
+      padding: 100px 20px;
+      max-width: 1200px;
       margin: auto;
       animation: fadeUp 1s ease-in;
     }
 
     h2 {
       text-align: center;
-      margin-bottom: 40px;
-      color: #38bdf8;
-      font-size: 2rem;
+      margin-bottom: 50px;
+      color: var(--primary-color);
+      font-size: 2.5rem;
+      text-shadow: 0 0 10px var(--shadow);
     }
 
     /* ABOUT */
     .about p {
       text-align: center;
-      max-width: 750px;
+      max-width: 800px;
       margin: auto;
-      color: #d1d5db;
-      font-size: 1.05rem;
+      color: var(--muted-text);
+      font-size: 1.1rem;
+      line-height: 1.8;
     }
 
     /* SKILLS & PROJECTS */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
     }
 
     .card {
-      background: #020617;
-      padding: 25px;
-      border-radius: 14px;
+      background: linear-gradient(145deg, var(--accent-color), #0f172a);
+      padding: 30px;
+      border-radius: 20px;
       text-align: center;
-      transition: transform 0.3s, box-shadow 0.3s;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     }
 
     .card i {
-      font-size: 2rem;
-      color: #38bdf8;
-      margin-bottom: 12px;
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: var(--text-color);
+    }
+
+    .card p {
+      color: var(--muted-text);
     }
 
     .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 35px rgba(56,189,248,0.25);
+      transform: translateY(-10px) rotate(1deg);
+      box-shadow: 0 15px 40px var(--shadow);
+      border-color: var(--primary-color);
+    }
+
+    .card:hover i {
+      transform: scale(1.2);
     }
 
     /* CONTACT */
     .contact {
       text-align: center;
     }
-.profile-pic {
-  width: 150px;           /* adjust size */
-  height: 150px;
-  object-fit: cover;      /* keep proportions */
-  border-radius: 50%;     /* make circle */
-  border: 4px solid #38bdf8; /* optional border color */
-  margin-bottom: 20px;
-  animation: fadeIn 1.5s ease-in;
-}
+
     .contact a {
       display: inline-block;
-      margin: 10px 15px;
-      color: #38bdf8;
+      margin: 15px 20px;
+      color: var(--primary-color);
       text-decoration: none;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .contact a:hover {
+      background: var(--primary-color);
+      color: var(--accent-color);
+      transform: scale(1.1);
     }
 
     footer {
       text-align: center;
-      padding: 25px;
-      background: #020617;
-      color: #9ca3af;
+      padding: 30px;
+      background: var(--accent-color);
+      color: var(--muted-text);
+      border-top: 1px solid var(--primary-color);
     }
 
     /* ANIMATIONS */
     @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
     }
 
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(40px); }
+      from { opacity: 0; transform: translateY(50px); }
       to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes bounceIn {
+      0% { transform: scale(0.3); opacity: 0; }
+      50% { transform: scale(1.05); }
+      70% { transform: scale(0.9); }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.5rem; }
+      .profile-pic { width: 120px; height: 120px; }
+      nav { gap: 15px; padding: 15px; }
+      .grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -217,6 +289,7 @@
   <!-- HERO -->
   <header id="home">
     <div>
+      <img src="IMG_20230322_212858.jpg" alt="MD Arif" class="profile-pic" />
       <h1>MD Arif</h1>
       <p>BSc in CSE Student | Aspiring Software Engineer</p>
       <p class="hero-text">
