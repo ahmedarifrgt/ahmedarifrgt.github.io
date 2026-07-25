@@ -898,12 +898,19 @@ p{letter-spacing:0.005em;}
           <a href="mailto:ahmedarif.rgt@gmail.com" class="w-12 h-12 rounded-xl glass flex items-center justify-center magnetic hover:text-cyan-300 transition-colors"><i data-lucide="send" class="w-5 h-5"></i></a>
         </div>
 
-        <div class="glass-card overflow-hidden h-48 relative">
-          <div class="absolute inset-0 proj-thumb flex items-center justify-center">
-            <div class="text-center">
-              <i data-lucide="map-pin" class="w-6 h-6 text-cyan-300 mx-auto mb-2"></i>
-              <div class="font-mono text-xs text-slate-400">Map location placeholder</div>
-            </div>
+      <div class="glass-card overflow-hidden h-48 relative">
+  <div class="absolute inset-0 proj-thumb flex items-center justify-center">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!...your-map-code..."
+      width="100%" 
+      height="100%" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</div>
           </div>
         </div>
       </div>
@@ -914,12 +921,12 @@ p{letter-spacing:0.005em;}
           <div class="grid sm:grid-cols-2 gap-5">
             <div>
               <label class="text-xs font-mono text-slate-400 mb-2 block">YOUR NAME</label>
-              <input type="text" name="name" class="form-input" placeholder="Jane Doe">
+              <input type="text" name="name" class="form-input" placeholder="MOHAMMED ARIF">
               <span class="err-msg text-xs text-red-400 hidden mt-1 block">Please enter your name.</span>
             </div>
             <div>
               <label class="text-xs font-mono text-slate-400 mb-2 block">YOUR EMAIL</label>
-              <input type="email" name="email" class="form-input" placeholder="you@example.com">
+              <input type="email" name="email" class="form-input" placeholder="ahmedarif.rgt@gmail.com">
               <span class="err-msg text-xs text-red-400 hidden mt-1 block">Please enter a valid email.</span>
             </div>
           </div>
@@ -1078,20 +1085,20 @@ const experience = [
 const education = [
   {
     degree:"B.Sc. in Computer Science & Engineering",
-    place:"[Add your university name]",
-    period:"[Add years]",
+    place:"[SOUTHERN UNIVERSITY BANGLADESH]",
+    period:"[2023-2026]",
     detail:"Focused on algorithms, databases, software engineering, and artificial intelligence."
   },
   {
     degree:"Higher Secondary Certificate (HSC)",
-    place:"[Add your college name]",
-    period:"[Add years]",
+    place:"[LANGADU GOVT DEGREE COLLEGE]",
+    period:"[2018-2020]",
     detail:"Science group — building the mathematical and analytical foundation for engineering."
   },
   {
     degree:"Secondary School Certificate (SSC)",
-    place:"[Add your school name]",
-    period:"[Add years]",
+    place:"[RABETA MODEL HIGH SCHOOL]",
+    period:"[2013-2018]",
     detail:"Science group — early foundation in mathematics and problem solving."
   }
 ];
